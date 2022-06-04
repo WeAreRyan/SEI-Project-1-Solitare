@@ -5,6 +5,11 @@ console.log("js is working");
 
 const Deck = [];
 
+//Gameboard objects
+
+ 
+
+//Card objects
 class Card {
     constructor(red, suit, value) {
         this.red = red;
@@ -86,20 +91,46 @@ const cardSpade = [SA, S2, S3, S4, S5, S6, S7, S8, S9, S10, SJ, SQ, SK];
 
 /*----- app's state (variables) -----*/
 
-let playerDeck = [];
-let playerPile = [];
+let playerDeck = document.getElementsByClassName('playerdeck'); 
+playerDeck.cards = [];
 
-let pileOne = [];
-let pileTwo = [];
-let pileThree = [];
-let pileFour = [];
-let pileFive = [];
-let pileSix = [];
+let playerPile = document.getElementsByClassName('playerpile');
+playerPile.cards = [];
 
-let stackOne = [];
-let stackTwo = [];
-let stackThree = [];
-let stackFour = [];
+let finishPile1 = document.getElementsByClassName('finishpile1'); 
+finishPile1.cards = [];
+
+let finishPile2 = document.getElementsByClassName('finishpile2'); 
+finishPile2.cards = [];
+
+let finishPile3 = document.getElementsByClassName('finishpile3'); 
+finishPile3.cards = [];
+
+let finishPile4 = document.getElementsByClassName('finishpile4'); 
+finishPile4.cards = [];
+
+let playPile1 = document.getElementsByClassName('playpile1'); 
+playPile1.cards = [];
+
+let playPile2 = document.getElementsByClassName('playpile2'); 
+playPile2.cards = [];
+
+let playPile3 = document.getElementsByClassName('playpile3'); 
+playPile3.cards = [];
+
+let playPile4 = document.getElementsByClassName('playpile4'); 
+playPile4.cards = [];
+
+let playPile5 = document.getElementsByClassName('playpile5'); 
+playPile5.cards = [];
+
+let playPile6 = document.getElementsByClassName('playpile6'); 
+playPile6.cards = [];
+
+let playPile7 = document.getElementsByClassName('playpile7'); 
+playPile7.cards = [];
+
+
 
 /*----- cached element references -----*/
 
@@ -109,9 +140,27 @@ let stackFour = [];
 
 /*----- functions -----*/
 
-// function shuffleDeck() {
-//     fullDeck.sort(() => Math.random() - 0.5);
-//   }
+function gameStart() {
+  shuffle();
+  playPile1.cards.push(fullDeck[0]);
+  fullDeck.splice(0, 1);
+  playPile2.cards.push(fullDeck[0], fullDeck[1]);
+  fullDeck.splice(0, 2);
+  playPile3.cards.push(fullDeck[0], fullDeck[1], fullDeck[2]);
+  fullDeck.splice(0, 3);
+  playPile4.cards.push(fullDeck[0], fullDeck[1], fullDeck[2], fullDeck[3]);
+  fullDeck.splice(0, 4);
+  playPile5.cards.push(fullDeck[0], fullDeck[1], fullDeck[2], fullDeck[3], fullDeck[4]);
+  fullDeck.splice(0, 5);
+  playPile6.cards.push(fullDeck[0], fullDeck[1], fullDeck[2], fullDeck[3], fullDeck[4], fullDeck[5]);
+  fullDeck.splice(0, 6);
+  playPile7.cards.push(fullDeck[0], fullDeck[1], fullDeck[2], fullDeck[3], fullDeck[4], fullDeck[5], fullDeck[6]);
+  fullDeck.splice(0, 7);
+  while(fullDeck.length > 0) {
+    playerDeck.cards.push(fullDeck[0]);
+    fullDeck.splice(0, 1);
+  }
+}
 
 
 //Shuffles deck
