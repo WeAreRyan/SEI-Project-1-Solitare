@@ -140,6 +140,61 @@ playPile7.cards = [];
 
 playerDeck.addEventListener('click', deckClick);
 
+
+playerPile.addEventListener('dragstart', cardDrag);
+playerPile.addEventListener('dragover', onDragOver);
+playerPile.addEventListener('drop', cardDropPlayPile);
+
+playPile2.addEventListener('dragstart', cardDrag);
+playPile2.addEventListener('dragover', onDragOver);
+playPile2.addEventListener('drop', cardDropPlayPile);
+
+playPile3.addEventListener('dragstart', cardDrag);
+playPile3.addEventListener('dragover', onDragOver);
+playPile3.addEventListener('drop', cardDropPlayPile);
+
+playPile4.addEventListener('dragstart', cardDrag);
+playPile4.addEventListener('dragover', onDragOver);
+playPile4.addEventListener('drop', cardDropPlayPile);
+
+playPile5.addEventListener('dragstart', cardDrag);
+playPile5.addEventListener('dragover', onDragOver);
+playPile5.addEventListener('drop', cardDropPlayPile);
+
+playPile6.addEventListener('dragstart', cardDrag);
+playPile6.addEventListener('dragover', onDragOver);
+playPile6.addEventListener('drop', cardDropPlayPile);
+
+playPile7.addEventListener('dragstart', cardDrag);
+playPile7.addEventListener('dragover', onDragOver);
+playPile7.addEventListener('drop', cardDropPlayPile);
+
+
+
+
+function cardDrag(evt) {
+  dragItem = event.target.cards[0];
+  event.target.cards.splice(0, 1)
+  return dragItem; 
+}
+
+function onDragOver(evt) {
+  event.preventDefault();
+  dropTarget = event.target
+  return dropTarget;
+}
+
+function cardDropPlayPile() {
+  if (dragItem.red !== dropTarget.cards[0].red && dragItem.value === dropTarget.cards[0].value + 1){
+  dropTarget.cards.unshift(dragItem)
+} else {playerPile.cards.unshift(dragItem);
+}
+  dropTarget = undefined;
+  dragItem = undefined;
+  cardLocations();
+}
+
+
 /*----- functions -----*/
 
 function gameStart() {
@@ -167,18 +222,35 @@ function gameStart() {
 
 
 
+
+// Function for playerDeck and PlayerPile
+
 function deckClick(evt) {
-  if(playerDeck.cards.length > 2) {playerPile.cards.unshift(playerDeck.cards[0], playerDeck.cards[1], playerDeck.cards[2]);
-  playerDeck.cards.push(0, 3);
-  playerPile.innerHTML = playerPile.cards[0].type;
-  } else {
-    while(playerPile.cards.length > 0) {
-      playerDeck.cards.unshift(playerPile.cards[0]);
-      playerPile.cards.splice(0, 1);
-      playerPile.innerHTML = "done";
-    }
-  }
-}
+  if(playerDeck.cards.length > 0) {playerPile.cards.unshift(playerDeck.cards[0]);
+    playerDeck.cards.splice(0, 1);
+    playerPile.innerHTML = playerPile.cards[0].type;
+    } else {
+      while(playerPile.cards.length > 0) {
+        playerDeck.cards.unshift(playerPile.cards[0]);
+        playerPile.cards.splice(0, 1);
+        playerPile.innerHTML = "!!!blank!!!";
+    } }}
+
+
+
+// !!! Commented out code for 3 card player flop. Unable to get working without re-ordering playerDeck
+// function deckClick(evt) {
+//   if(playerDeck.cards.length > 2) {playerPile.cards.unshift(playerDeck.cards[0], playerDeck.cards[1], playerDeck.cards[2]);
+//   playerDeck.cards.push(0, 3);
+//   playerPile.innerHTML = playerPile.cards[0].type;
+//   } else {
+    // while(playerPile.cards.length > 0) {
+    //   playerDeck.cards.unshift(playerPile.cards[0]);
+    //   playerPile.cards.splice(0, 1);
+    //   playerPile.innerHTML = "done";
+//     }
+//   }
+// }
 
 
 
@@ -192,7 +264,13 @@ function deckClick(evt) {
 
 function cardLocations() {
   // playerPile.innerHTML = playerPile.cards[0].type;
+  if (playerPile.cards.length > 0) {playerPile.innerHTML = playerPile.cards[0].type
+  } else {playerPile.innerHTML = "";
+}
+  if(playPile1.cards.length > 0) {
   playPile1.innerHTML = playPile1.cards[0].type;
+} else {playPile1.innerHTML = ""}
+
   playPile2.innerHTML = playPile2.cards[0].type;
   playPile3.innerHTML = playPile3.cards[0].type;
   playPile4.innerHTML = playPile4.cards[0].type;
@@ -212,7 +290,11 @@ function shuffle() {
 
 
 
-  gameStart()
+  gameStart(); 
 
-// drag and drop event handlers .ondrag = pickup, .ondragend = when dropped, .ondragenter = when item enters a valid drop area
+  
 
+
+
+  // Drag and drop card functions
+  
