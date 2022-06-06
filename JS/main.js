@@ -11,72 +11,73 @@ const Deck = [];
 
 //Card objects
 class Card {
-    constructor(red, suit, value) {
+    constructor(red, suit, value, type) {
         this.red = red;
         this.suit = suit;
         this.value = value;
+        this.type = type;
     }
 }
 
 // Objects for heart cards
-const HA = new Card(true, "heart", 1);
-const H2 = new Card(true, "heart", 2);
-const H3 = new Card(true, "heart", 3);
-const H4 = new Card(true, "heart", 4);
-const H5 = new Card(true, "heart", 5);
-const H6 = new Card(true, "heart", 6);
-const H7 = new Card(true, "heart", 7);
-const H8 = new Card(true, "heart", 8);
-const H9 = new Card(true, "heart", 9);
-const H10 = new Card(true, "heart", 10);
-const HJ = new Card(true, "heart", 11);
-const HQ = new Card(true, "heart", 12);
-const HK = new Card(true, "heart", 13);
+const HA = new Card(true, "heart", 1, "HA");
+const H2 = new Card(true, "heart", 2, "H2");
+const H3 = new Card(true, "heart", 3, "H3");
+const H4 = new Card(true, "heart", 4, "H4");
+const H5 = new Card(true, "heart", 5, "H5");
+const H6 = new Card(true, "heart", 6, "H6");
+const H7 = new Card(true, "heart", 7, "H7");
+const H8 = new Card(true, "heart", 8, "H8");
+const H9 = new Card(true, "heart", 9, "H9");
+const H10 = new Card(true, "heart", 10, "H10");
+const HJ = new Card(true, "heart", 11, "HJ");
+const HQ = new Card(true, "heart", 12, "HQ");
+const HK = new Card(true, "heart", 13, "HK");
 
 //Objects for diamond cards
-const DA = new Card(true, "diamond", 1);
-const D2 = new Card(true, "diamond", 2);
-const D3 = new Card(true, "diamond", 3);
-const D4 = new Card(true, "diamond", 4);
-const D5 = new Card(true, "diamond", 5);
-const D6 = new Card(true, "diamond", 6);
-const D7 = new Card(true, "diamond", 7);
-const D8 = new Card(true, "diamond", 8);
-const D9 = new Card(true, "diamond", 9);
-const D10 = new Card(true, "diamond", 10);
-const DJ = new Card(true, "diamond", 11);
-const DQ = new Card(true, "diamond", 12);
-const DK = new Card(true, "diamond", 13);
+const DA = new Card(true, "diamond", 1, "DA");
+const D2 = new Card(true, "diamond", 2, "D2");
+const D3 = new Card(true, "diamond", 3, "D3");
+const D4 = new Card(true, "diamond", 4, "D4");
+const D5 = new Card(true, "diamond", 5, "D5");
+const D6 = new Card(true, "diamond", 6, "D6");
+const D7 = new Card(true, "diamond", 7, "D7");
+const D8 = new Card(true, "diamond", 8, "D8");
+const D9 = new Card(true, "diamond", 9, "D9");
+const D10 = new Card(true, "diamond", 10, "D10");
+const DJ = new Card(true, "diamond", 11, "DJ");
+const DQ = new Card(true, "diamond", 12, "DQ");
+const DK = new Card(true, "diamond", 13, "DK");
 
 // Objects for clover cards
-const CA = new Card(false, "clover", 1);
-const C2 = new Card(false, "clover", 2);
-const C3 = new Card(false, "clover", 3);
-const C4 = new Card(false, "clover", 4);
-const C5 = new Card(false, "clover", 5);
-const C6 = new Card(false, "clover", 6);
-const C7 = new Card(false, "clover", 7);
-const C8 = new Card(false, "clover", 8);
-const C9 = new Card(false, "clover", 9);
-const C10 = new Card(false, "clover", 10);
-const CJ = new Card(false, "clover", 11);
-const CQ = new Card(false, "clover", 12);
-const CK = new Card(false, "clover", 13);
+const CA = new Card(false, "clover", 1, "CA");
+const C2 = new Card(false, "clover", 2, "C2");
+const C3 = new Card(false, "clover", 3, "C3");
+const C4 = new Card(false, "clover", 4, "C4");
+const C5 = new Card(false, "clover", 5, "C5");
+const C6 = new Card(false, "clover", 6, "C6");
+const C7 = new Card(false, "clover", 7, "C7");
+const C8 = new Card(false, "clover", 8, "C8");
+const C9 = new Card(false, "clover", 9, "C9");
+const C10 = new Card(false, "clover", 10, "C10");
+const CJ = new Card(false, "clover", 11, "CJ");
+const CQ = new Card(false, "clover", 12, "CQ");
+const CK = new Card(false, "clover", 13, "CK");
 
 // Objects for spade cards
-const SA = new Card(false, "spade", 1);
-const S2 = new Card(false, "spade", 2);
-const S3 = new Card(false, "spade", 3);
-const S4 = new Card(false, "spade", 4);
-const S5 = new Card(false, "spade", 5);
-const S6 = new Card(false, "spade", 6);
-const S7 = new Card(false, "spade", 7);
-const S8 = new Card(false, "spade", 8);
-const S9 = new Card(false, "spade", 9);
-const S10 = new Card(false, "spade", 10);
-const SJ = new Card(false, "spade", 11);
-const SQ = new Card(false, "spade", 12);
-const SK = new Card(false, "spade", 13);
+const SA = new Card(false, "spade", 1, "SA");
+const S2 = new Card(false, "spade", 2, "S2");
+const S3 = new Card(false, "spade", 3, "S3");
+const S4 = new Card(false, "spade", 4, "S4");
+const S5 = new Card(false, "spade", 5, "S5");
+const S6 = new Card(false, "spade", 6, "S6");
+const S7 = new Card(false, "spade", 7, "S7");
+const S8 = new Card(false, "spade", 8, "S8");
+const S9 = new Card(false, "spade", 9, "S9");
+const S10 = new Card(false, "spade", 10, "S10");
+const SJ = new Card(false, "spade", 11, "SJ");
+const SQ = new Card(false, "spade", 12, "SQ");
+const SK = new Card(false, "spade", 13, "SK");
 
 
 const fullDeck = [HA, H2, H3, H4, H5, H6, H7, H8, H9, H10, HJ, HQ, HK, DA, D2, D3, D4, D5, D6, D7, D8, D9, D10, DJ, DQ, DK, CA, C2, C3, C4, C5, C6, C7, C8, C9, C10, CJ, CQ, CK, SA, S2, S3, S4, S5, S6, S7, S8, S9, S10, SJ, SQ, SK]; 
@@ -91,43 +92,43 @@ const cardSpade = [SA, S2, S3, S4, S5, S6, S7, S8, S9, S10, SJ, SQ, SK];
 
 /*----- app's state (variables) -----*/
 
-let playerDeck = document.getElementsByClassName('playerdeck'); 
+let playerDeck = document.getElementById('playerdeck'); 
 playerDeck.cards = [];
 
-let playerPile = document.getElementsByClassName('playerpile');
+let playerPile = document.getElementById('playerpile');
 playerPile.cards = [];
 
-let finishPile1 = document.getElementsByClassName('finishpile1'); 
+let finishPile1 = document.getElementById('finishpile1'); 
 finishPile1.cards = [];
 
-let finishPile2 = document.getElementsByClassName('finishpile2'); 
+let finishPile2 = document.getElementById('finishpile2'); 
 finishPile2.cards = [];
 
-let finishPile3 = document.getElementsByClassName('finishpile3'); 
+let finishPile3 = document.getElementById('finishpile3'); 
 finishPile3.cards = [];
 
-let finishPile4 = document.getElementsByClassName('finishpile4'); 
+let finishPile4 = document.getElementById('finishpile4'); 
 finishPile4.cards = [];
 
-let playPile1 = document.getElementsByClassName('playpile1'); 
+let playPile1 = document.getElementById('playpile1'); 
 playPile1.cards = [];
 
-let playPile2 = document.getElementsByClassName('playpile2'); 
+let playPile2 = document.getElementById('playpile2'); 
 playPile2.cards = [];
 
-let playPile3 = document.getElementsByClassName('playpile3'); 
+let playPile3 = document.getElementById('playpile3'); 
 playPile3.cards = [];
 
-let playPile4 = document.getElementsByClassName('playpile4'); 
+let playPile4 = document.getElementById('playpile4'); 
 playPile4.cards = [];
 
-let playPile5 = document.getElementsByClassName('playpile5'); 
+let playPile5 = document.getElementById('playpile5'); 
 playPile5.cards = [];
 
-let playPile6 = document.getElementsByClassName('playpile6'); 
+let playPile6 = document.getElementById('playpile6'); 
 playPile6.cards = [];
 
-let playPile7 = document.getElementsByClassName('playpile7'); 
+let playPile7 = document.getElementById('playpile7'); 
 playPile7.cards = [];
 
 
@@ -137,6 +138,7 @@ playPile7.cards = [];
 
 /*----- event listeners -----*/
 
+playerDeck.addEventListener('click', deckClick);
 
 /*----- functions -----*/
 
@@ -160,8 +162,45 @@ function gameStart() {
     playerDeck.cards.push(fullDeck[0]);
     fullDeck.splice(0, 1);
   }
+  cardLocations()
 }
 
+
+
+function deckClick(evt) {
+  if(playerDeck.cards.length > 2) {playerPile.cards.unshift(playerDeck.cards[0], playerDeck.cards[1], playerDeck.cards[2]);
+  playerDeck.cards.push(0, 3);
+  playerPile.innerHTML = playerPile.cards[0].type;
+  } else {
+    while(playerPile.cards.length > 0) {
+      playerDeck.cards.unshift(playerPile.cards[0]);
+      playerPile.cards.splice(0, 1);
+      playerPile.innerHTML = "done";
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+function cardLocations() {
+  // playerPile.innerHTML = playerPile.cards[0].type;
+  playPile1.innerHTML = playPile1.cards[0].type;
+  playPile2.innerHTML = playPile2.cards[0].type;
+  playPile3.innerHTML = playPile3.cards[0].type;
+  playPile4.innerHTML = playPile4.cards[0].type;
+  playPile5.innerHTML = playPile5.cards[0].type;
+  playPile6.innerHTML = playPile6.cards[0].type;
+  playPile7.innerHTML = playPile7.cards[0].type;
+}
+  
 
 //Shuffles deck
 function shuffle() {
@@ -171,6 +210,9 @@ function shuffle() {
     }
   }
 
+
+
+  gameStart()
 
 // drag and drop event handlers .ondrag = pickup, .ondragend = when dropped, .ondragenter = when item enters a valid drop area
 
