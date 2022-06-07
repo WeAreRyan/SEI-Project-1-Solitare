@@ -20,64 +20,64 @@ class Card {
 }
 
 // Objects for heart cards
-const HA = new Card(true, "heart", 1, "HA");
-const H2 = new Card(true, "heart", 2, "H2");
-const H3 = new Card(true, "heart", 3, "H3");
-const H4 = new Card(true, "heart", 4, "H4");
-const H5 = new Card(true, "heart", 5, "H5");
-const H6 = new Card(true, "heart", 6, "H6");
-const H7 = new Card(true, "heart", 7, "H7");
-const H8 = new Card(true, "heart", 8, "H8");
-const H9 = new Card(true, "heart", 9, "H9");
-const H10 = new Card(true, "heart", 10, "H10");
-const HJ = new Card(true, "heart", 11, "HJ");
-const HQ = new Card(true, "heart", 12, "HQ");
-const HK = new Card(true, "heart", 13, "HK");
+const HA = new Card('red', "heart", 1, "HA");
+const H2 = new Card('red', "heart", 2, "H2");
+const H3 = new Card('red', "heart", 3, "H3");
+const H4 = new Card('red', "heart", 4, "H4");
+const H5 = new Card('red', "heart", 5, "H5");
+const H6 = new Card('red', "heart", 6, "H6");
+const H7 = new Card('red', "heart", 7, "H7");
+const H8 = new Card('red', "heart", 8, "H8");
+const H9 = new Card('red', "heart", 9, "H9");
+const H10 = new Card('red', "heart", 10, "H10");
+const HJ = new Card('red', "heart", 11, "HJ");
+const HQ = new Card('red', "heart", 12, "HQ");
+const HK = new Card('red', "heart", 13, "HK");
 
 //Objects for diamond cards
-const DA = new Card(true, "diamond", 1, "DA");
-const D2 = new Card(true, "diamond", 2, "D2");
-const D3 = new Card(true, "diamond", 3, "D3");
-const D4 = new Card(true, "diamond", 4, "D4");
-const D5 = new Card(true, "diamond", 5, "D5");
-const D6 = new Card(true, "diamond", 6, "D6");
-const D7 = new Card(true, "diamond", 7, "D7");
-const D8 = new Card(true, "diamond", 8, "D8");
-const D9 = new Card(true, "diamond", 9, "D9");
-const D10 = new Card(true, "diamond", 10, "D10");
-const DJ = new Card(true, "diamond", 11, "DJ");
-const DQ = new Card(true, "diamond", 12, "DQ");
-const DK = new Card(true, "diamond", 13, "DK");
+const DA = new Card('red', "diamond", 1, "DA");
+const D2 = new Card('red', "diamond", 2, "D2");
+const D3 = new Card('red', "diamond", 3, "D3");
+const D4 = new Card('red', "diamond", 4, "D4");
+const D5 = new Card('red', "diamond", 5, "D5");
+const D6 = new Card('red', "diamond", 6, "D6");
+const D7 = new Card('red', "diamond", 7, "D7");
+const D8 = new Card('red', "diamond", 8, "D8");
+const D9 = new Card('red', "diamond", 9, "D9");
+const D10 = new Card('red', "diamond", 10, "D10");
+const DJ = new Card('red', "diamond", 11, "DJ");
+const DQ = new Card('red', "diamond", 12, "DQ");
+const DK = new Card('red', "diamond", 13, "DK");
 
 // Objects for clover cards
-const CA = new Card(false, "clover", 1, "CA");
-const C2 = new Card(false, "clover", 2, "C2");
-const C3 = new Card(false, "clover", 3, "C3");
-const C4 = new Card(false, "clover", 4, "C4");
-const C5 = new Card(false, "clover", 5, "C5");
-const C6 = new Card(false, "clover", 6, "C6");
-const C7 = new Card(false, "clover", 7, "C7");
-const C8 = new Card(false, "clover", 8, "C8");
-const C9 = new Card(false, "clover", 9, "C9");
-const C10 = new Card(false, "clover", 10, "C10");
-const CJ = new Card(false, "clover", 11, "CJ");
-const CQ = new Card(false, "clover", 12, "CQ");
-const CK = new Card(false, "clover", 13, "CK");
+const CA = new Card('black', "clover", 1, "CA");
+const C2 = new Card('black', "clover", 2, "C2");
+const C3 = new Card('black', "clover", 3, "C3");
+const C4 = new Card('black', "clover", 4, "C4");
+const C5 = new Card('black', "clover", 5, "C5");
+const C6 = new Card('black', "clover", 6, "C6");
+const C7 = new Card('black', "clover", 7, "C7");
+const C8 = new Card('black', "clover", 8, "C8");
+const C9 = new Card('black', "clover", 9, "C9");
+const C10 = new Card('black', "clover", 10, "C10");
+const CJ = new Card('black', "clover", 11, "CJ");
+const CQ = new Card('black', "clover", 12, "CQ");
+const CK = new Card('black', "clover", 13, "CK");
 
 // Objects for spade cards
-const SA = new Card(false, "spade", 1, "SA");
-const S2 = new Card(false, "spade", 2, "S2");
-const S3 = new Card(false, "spade", 3, "S3");
-const S4 = new Card(false, "spade", 4, "S4");
-const S5 = new Card(false, "spade", 5, "S5");
-const S6 = new Card(false, "spade", 6, "S6");
-const S7 = new Card(false, "spade", 7, "S7");
-const S8 = new Card(false, "spade", 8, "S8");
-const S9 = new Card(false, "spade", 9, "S9");
-const S10 = new Card(false, "spade", 10, "S10");
-const SJ = new Card(false, "spade", 11, "SJ");
-const SQ = new Card(false, "spade", 12, "SQ");
-const SK = new Card(false, "spade", 13, "SK");
+const SA = new Card('black', "spade", 1, "SA");
+const S2 = new Card('black', "spade", 2, "S2");
+const S3 = new Card('black', "spade", 3, "S3");
+const S4 = new Card('black', "spade", 4, "S4");
+const S5 = new Card('black', "spade", 5, "S5");
+const S6 = new Card('black', "spade", 6, "S6");
+const S7 = new Card('black', "spade", 7, "S7");
+const S8 = new Card('black', "spade", 8, "S8");
+const S9 = new Card('black', "spade", 9, "S9");
+const S10 = new Card('black', "spade", 10, "S10");
+const SJ = new Card('black', "spade", 11, "SJ");
+const SQ = new Card('black', "spade", 12, "SQ");
+const SK = new Card('black', "spade", 13, "SK");
 
 
 const fullDeck = [HA, H2, H3, H4, H5, H6, H7, H8, H9, H10, HJ, HQ, HK, DA, D2, D3, D4, D5, D6, D7, D8, D9, D10, DJ, DQ, DK, CA, C2, C3, C4, C5, C6, C7, C8, C9, C10, CJ, CQ, CK, SA, S2, S3, S4, S5, S6, S7, S8, S9, S10, SJ, SQ, SK]; 
@@ -140,10 +140,12 @@ playPile7.cards = [];
 
 playerDeck.addEventListener('click', deckClick);
 
+playerPile.addEventListener('dragstart', cardDrag)
 
-playerPile.addEventListener('dragstart', cardDrag);
-playerPile.addEventListener('dragover', onDragOver);
-playerPile.addEventListener('drop', cardDropPlayPile);
+
+playPile1.addEventListener('dragstart', cardDrag);
+playPile1.addEventListener('dragover', onDragOver);
+playPile1.addEventListener('drop', cardDropPlayPile);
 
 playPile2.addEventListener('dragstart', cardDrag);
 playPile2.addEventListener('dragover', onDragOver);
@@ -169,10 +171,21 @@ playPile7.addEventListener('dragstart', cardDrag);
 playPile7.addEventListener('dragover', onDragOver);
 playPile7.addEventListener('drop', cardDropPlayPile);
 
+finishPile1.addEventListener('dragover', onDragOver)
+finishPile1.addEventListener('drop', cardDropFinishPile)
 
+finishPile2.addEventListener('dragover', onDragOver)
+finishPile2.addEventListener('drop', cardDropFinishPile)
+
+finishPile3.addEventListener('dragover', onDragOver)
+finishPile3.addEventListener('drop', cardDropFinishPile)
+
+finishPile4.addEventListener('dragover', onDragOver)
+finishPile4.addEventListener('drop', cardDropFinishPile)
 
 
 function cardDrag(evt) {
+  clickSource = event.target.cards;
   dragItem = event.target.cards[0];
   event.target.cards.splice(0, 1)
   return dragItem; 
@@ -184,16 +197,27 @@ function onDragOver(evt) {
   return dropTarget;
 }
 
-function cardDropPlayPile() {
-  if (dragItem.red !== dropTarget.cards[0].red && dragItem.value === dropTarget.cards[0].value + 1){
+function cardDropPlayPile(evt) {
+  if (dragItem.red !== dropTarget.cards[0].red && dragItem.value === dropTarget.cards[0].value - 1){
   dropTarget.cards.unshift(dragItem)
-} else {playerPile.cards.unshift(dragItem);
+} else {
+  clickSource.unshift(dragItem);
 }
   dropTarget = undefined;
   dragItem = undefined;
   cardLocations();
 }
 
+function cardDropFinishPile(evt) {
+  if (dropTarget.cards.length < 1 && dragItem.value === 1){
+    dropTarget.cards.unshift(dragItem);
+  } else if (dropTarget.cards[dropTarget.cards.length - 1].value === dragItem.value - 1 && dropTarget.cards[0].suit === dragItem.suit) {
+    dropTarget.cards.unshift(dragItem);
+  } else {clickSource.unshift(dragItem)}
+  dropTarget = undefined;
+  dragItem = undefined;
+  cardLocations();
+}
 
 /*----- functions -----*/
 
@@ -277,8 +301,22 @@ function cardLocations() {
   playPile5.innerHTML = playPile5.cards[0].type;
   playPile6.innerHTML = playPile6.cards[0].type;
   playPile7.innerHTML = playPile7.cards[0].type;
+
+  if(finishPile1.cards.length > 0) {
+    finishPile1.innerHTML = finishPile1.cards[0].type;
+  } else {finishPile1.innerHTML = ""}
+  if(finishPile2.cards.length > 0) {
+    finishPile2.innerHTML = finishPile2.cards[0].type;
+  } else {finishPile2.innerHTML = ""}
+  if(finishPile3.cards.length > 0) {
+    finishPile3.innerHTML = finishPile3.cards[0].type;
+  } else {finishPile3.innerHTML = ""}
+  if(finishPile4.cards.length > 0) {
+    finishPile4.innerHTML = finishPile4.cards[0].type;
+  } else {finishPile4.innerHTML = ""}
 }
-  
+
+
 
 //Shuffles deck
 function shuffle() {
