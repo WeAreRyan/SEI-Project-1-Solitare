@@ -3,6 +3,7 @@ console.log("js is working");
 
 /*----- constants -----*/
 
+const board = document.getElementById('board');
 const Deck = [];
 
 //Gameboard objects
@@ -189,9 +190,8 @@ finishPile4.addEventListener('drop', cardDropFinishPile)
 function cardDrag(evt) {
   clickSource = event.target.cards;
   dragItem = event.target.cards[0];
-  // event.target.cards.splice(0, 1);
-  // console.log(dragSource)
-
+  dragSource = event.target;
+ console.log(dragItem.type)
   return dragItem;
   return clickSource;
 }
@@ -216,6 +216,10 @@ function cardDropPlayPile(evt) {
   } else if (dragItem.red !== dropTarget.cards[0].red && dragItem.value === dropTarget.cards[0].value - 1) {
   dropTarget.cards.unshift(dragItem);
   clickSource.splice(0, 1);
+
+  dragSource.innerHTML = clickSource[0].type
+  placeCard();
+
 } else {
   clickSource.unshift(dragItem);
   clickSource.splice(0, 1);
@@ -223,8 +227,10 @@ function cardDropPlayPile(evt) {
 dropTarget = undefined;
 dragItem = undefined;
 clickSource = undefined;
-cardLocations();
+// cardLocations();
 }
+
+
 
 function cardDropFinishPile(evt) {
   if (dropTarget.cards.length < 1 && dragItem.value === 1) {
@@ -242,7 +248,6 @@ function cardDropFinishPile(evt) {
   dropTarget = undefined;
   dragItem = undefined;
   clickSource = undefined;
-  cardLocations();
 }
 
 /*----- functions -----*/
@@ -284,7 +289,7 @@ function deckClick(evt) {
     while (playerPile.cards.length > 0) {
       playerDeck.cards.unshift(playerPile.cards[0]);
       playerPile.cards.splice(0, 1);
-      playerPile.innerHTML = "!!!blank!!!";
+      playerPile.innerHTML = "";
     }
   }
 }
@@ -308,33 +313,35 @@ function deckClick(evt) {
 
 
 
-function findTotalCards() {
-  let totalCards = playPile1.cards.length + playPile2.cards.length + playPile3.cards.length + playPile4.cards.length + playPile5.cards.length + playPile6.cards.length + playPile7.cards.length + finishPile1.cards.length + finishPile2.cards.length + finishPile3.cards.length + finishPile4.cards.length + playerDeck.cards.length + playerPile.cards.length; 
-  console.log(totalCards); 
-}
-
-
-
-
-
 
 function cardLocations() {
   // playerPile.innerHTML = playerPile.cards[0].type;
   if (playerPile.cards.length > 0) {
     playerPile.innerHTML = playerPile.cards[0].type
   } else {
-    playerPile.innerHTML = "";
-  }
-  if (playPile1.cards.length > 0) {
-    playPile1.innerHTML = playPile1.cards[0].type;
-  } else { playPile1.innerHTML = "" }
+    playerPile.innerHTML = "";}
 
-  playPile2.innerHTML = playPile2.cards[0].type;
-  playPile3.innerHTML = playPile3.cards[0].type;
-  playPile4.innerHTML = playPile4.cards[0].type;
-  playPile5.innerHTML = playPile5.cards[0].type;
-  playPile6.innerHTML = playPile6.cards[0].type;
-  playPile7.innerHTML = playPile7.cards[0].type;
+  if (playPile1.cards.length > 0) {
+    playPile1.innerText = playPile1.cards[0].type;
+  } else { playPile1.innerText = "" }
+  if (playPile2.cards.length > 0) {
+    playPile2.innerHTML = playPile2.cards[0].type;
+  } else { playPile2.innerHTML = "" }
+  if (playPile3.cards.length > 0) {
+    playPile3.innerHTML = playPile3.cards[0].type;
+  } else { playPile3.innerHTML = "" }
+  if (playPile4.cards.length > 0) {
+    playPile4.innerHTML = playPile4.cards[0].type;
+  } else { playPile4.innerHTML = "" }
+  if (playPile5.cards.length > 0) {
+    playPile5.innerHTML = playPile5.cards[0].type;
+  } else { playPile5.innerHTML = "" }
+  if (playPile6.cards.length > 0) {
+    playPile6.innerHTML = playPile6.cards[0].type;
+  } else { playPile6.innerHTML = "" }
+  if (playPile7.cards.length > 0) {
+    playPile7.innerHTML = playPile7.cards[0].type;
+  } else { playPile7.innerHTML = "" }
 
   if (finishPile1.cards.length > 0) {
     finishPile1.innerHTML = finishPile1.cards[0].type;
@@ -367,5 +374,51 @@ gameStart();
 
 
 
+
+function testFun() {
+    if(playPile7.cards[1] !== undefined && playpile7.hc1 === undefined) {
+    let playpile7hc1 = document.createElement("div");
+    playpile7hc1.innerHTML = playPile7.cards[1].type;
+    playpile7hc1.classList.add("playpile7hc1");
+    playPile7.appendChild(playpile7hc1);
+    let playpile7hc2 = document.createElement("div");
+    playpile7hc2.innerHTML = playPile7.cards[2].type;
+    playpile7hc2.classList.add('playpile7hc2');
+    playPile7.appendChild(playpile7hc2);
+  }
+  playpile7.hc1 = document.getElementsByClassName(playPile7.cards[1].type)
+  playpile7.hc2 = document.getElementsByClassName(playPile7.cards[2].type)
+}
+
+function placeCard() {
+  let newCard = document.createElement("div");
+newCard.innerHTML = dragItem.type;
+dropTarget.appendChild(newCard);
+}
+
+
+// playPile7.cards.forEach(function(card, idx)) {
+//   console.log(this)
+// }
+
+
+// function testFun() {
+//   playPile7.cards.forEach(function(card, idx) {
+//   let newObj = document.createElement("div");
+//   newObj.innerHTML = playPile7.card[idx].type;
+//   newObj.classList.add("test")
+//   playPile7.appendChild(newObj);
+//   console.log(playPile7.card[idx].type)
+
+// })
+// }
+
+
+
+// @@@ Debugging function @@@
+function findTotalCards() {
+  let totalCards = playPile1.cards.length + playPile2.cards.length + playPile3.cards.length + playPile4.cards.length + playPile5.cards.length + playPile6.cards.length + playPile7.cards.length + finishPile1.cards.length + finishPile2.cards.length + finishPile3.cards.length + finishPile4.cards.length + playerDeck.cards.length + playerPile.cards.length; 
+  console.log(totalCards); 
+}
 
   // Drag and drop card functions
