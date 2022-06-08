@@ -216,7 +216,6 @@ function cardDropPlayPile(evt) {
   } else if (dragItem.red !== dropTarget.cards[0].red && dragItem.value === dropTarget.cards[0].value - 1) {
   dropTarget.cards.unshift(dragItem);
   clickSource.splice(0, 1);
-
   dragSource.innerHTML = clickSource[0].type
   placeCard();
 
@@ -236,12 +235,16 @@ function cardDropFinishPile(evt) {
   if (dropTarget.cards.length < 1 && dragItem.value === 1) {
     dropTarget.cards.unshift(dragItem);
     clickSource.splice(0, 1);
+    dragSource.innerHTML = clickSource[0].type;
+    dropTarget.innerHTML = dragItem.type;
   } else if (dropTarget.cards.length === 0) {
     clickSource.unshift(dragItem);
     clickSource.splice(0, 1); 
   } else if (dropTarget.cards[0].value === dragItem.value - 1 && dropTarget.cards[0].suit === dragItem.suit) {
     dropTarget.cards.unshift(dragItem);
     clickSource.splice(0, 1);
+    dragSource.innerHTML = clickSource[0].type;
+    dropTarget.innerHTML = dragItem.type;
   } else {
     clickSource.unshift(dragItem);
     clickSource.splice(0, 1); }
@@ -391,7 +394,7 @@ function testFun() {
 }
 
 function placeCard() {
-  let newCard = document.createElement("div");
+  let newCard = document.createElement("div draggable=true");
 newCard.innerHTML = dragItem.type;
 dropTarget.appendChild(newCard);
 }

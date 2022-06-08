@@ -20,7 +20,7 @@ body {
     margin: 0 auto;
     }
 
-    .playerdeck {
+    /* .playerdeck {
         grid-column: 1;
         grid-row: 1;
         color: black;
@@ -28,4 +28,9 @@ body {
     .playerpile {
         grid-column: 2;
         grid-row; 1
+    } */
+    
+
+    #playerdeck, #playerpile, #blank, #finishpile1, #finishpile2, #finishpile3, #finishpile4, #playpile1, #playpile2, #playpile3, #playpile4, #playpile5, #playpile6, #playpile7 {
+        border: 5px solid green;
     }
