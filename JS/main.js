@@ -188,7 +188,8 @@ finishPile4.addEventListener('drop', cardDropFinishPile)
 
 
 function cardDrag(evt) {
-  if(event.target.cards.length > 0) {clickSource = event.target.cards;
+  if(event.target.cards.length > 0) {
+    clickSource = event.target.cards;
   dragItem = event.target.cards[0];
   dragSource = event.target;
  console.log(dragItem.type)
@@ -225,7 +226,6 @@ function cardDropPlayPile(evt) {
     clickSource.splice(0, 1);
   } else if (dragItem.red !== dropTarget.cards[0].red && dragItem.value === dropTarget.cards[0].value - 1) {
     dropTarget.cards.unshift(dragItem);
-    clickSource.splice(0, 1);
     if (dragSource.cards.length === 0) {
       dragSource.innerHTML = '';
     } else {dragSource.innerHTML = clickSource[0].type;}
@@ -236,11 +236,35 @@ function cardDropPlayPile(evt) {
   clickSource.unshift(dragItem);
   clickSource.splice(0, 1);
 }
+
+placedCardObj();
+cardPlop()
 dropTarget = undefined;
 dragItem = undefined;
 clickSource = undefined;
-// cardLocations();
 }
+
+
+
+let placedCard  = undefined;
+
+function placedCardObj() {
+  placedCard = document.getElementById(dragItem.type); 
+  placedCard.cards = []
+}
+
+function cardPlop() {
+  placedCard.cards.push(dragItem);
+  clickSource.splice(0, 1); 
+  dropTarget.cards.splice(0, 1)
+  console.log('plop')
+  }
+
+
+
+
+
+
 
 
 
@@ -396,20 +420,7 @@ gameStart();
 
 
 
-function testFun() {
-    if(playPile7.cards[1] !== undefined && playpile7.hc1 === undefined) {
-    let playpile7hc1 = document.createElement("div");
-    playpile7hc1.innerHTML = playPile7.cards[1].type;
-    playpile7hc1.classList.add("playpile7hc1");
-    playPile7.appendChild(playpile7hc1);
-    let playpile7hc2 = document.createElement("div");
-    playpile7hc2.innerHTML = playPile7.cards[2].type;
-    playpile7hc2.classList.add('playpile7hc2');
-    playPile7.appendChild(playpile7hc2);
-  }
-  playpile7.hc1 = document.getElementsByClassName(playPile7.cards[1].type)
-  playpile7.hc2 = document.getElementsByClassName(playPile7.cards[2].type)
-}
+
 
 function placeCard() {
   let newCard = document.createElement("div");
@@ -419,18 +430,49 @@ newCard.setAttribute('id', dragItem.type)
 dropTarget.appendChild(newCard);
 }
 
-function placeCardPile1() {
-  let newCard = document.createElement("div");
-newCard.innerHTML = dragItem.type;
-newCard.setAttribute('draggable', true)
-newCard.setAttribute('id', dragItem.type)
-dropTarget.appendChild(newCard);
-let pile1DropCard1 = document.getElementById(dragItem.type);
-pile1DropCard1.cards.unshift(dragItem);
-return pile1DropCard1
-}
 
 
+
+// let placedCard  = undefined;
+
+// function placedCardObj() {
+//   placedCard = document.getElementById(dragItem.type); 
+//   placedCard.cards = []
+// }
+
+// function cardPlop() {
+//   placedCard.cards.push(dragItem);
+//   clickSource.splice(0, 1); 
+//   dragSource.cards.splice(0, 1)
+//   console.log('plop')
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function createPileDrop() {
+//   const tempCard = document.getElementById(dragItem.type);
+//   return tempCard;
+//   console.log(tempCard)
+// }
 
 
 // function testFun() {
@@ -450,6 +492,7 @@ return pile1DropCard1
 function findTotalCards() {
   let totalCards = playPile1.cards.length + playPile2.cards.length + playPile3.cards.length + playPile4.cards.length + playPile5.cards.length + playPile6.cards.length + playPile7.cards.length + finishPile1.cards.length + finishPile2.cards.length + finishPile3.cards.length + finishPile4.cards.length + playerDeck.cards.length + playerPile.cards.length; 
   console.log(totalCards); 
+  
 }
 
   // Drag and drop card functions
