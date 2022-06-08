@@ -192,7 +192,6 @@ function cardDrag(evt) {
     clickSource = event.target.cards;
   dragItem = event.target.cards[0];
   dragSource = event.target;
- console.log(dragItem.type)
   return dragItem;
   return clickSource;
   console.log(dragItem.cards);
