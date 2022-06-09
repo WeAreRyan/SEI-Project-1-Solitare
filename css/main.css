@@ -5,21 +5,33 @@
 } */
 
 body {
-     background-color: black;  
+     background-color: #1a1a1a;  
 }
 h1 {
     color: white;
     text-align: center;
-    font-size: 50px;
-    text-shadow: 3px 3px #e60000;
+    font-size: 65px;
+    text-shadow: 4px 4px #e6005c;
+    font-family: 'Fredoka One', sans-serif;
+    margin: 50px;
 }
 h2 {
     color: white;
     text-align: center;
+    margin: 35px;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 2px #cc00ff;
+}
+.devname {
+    color: white;
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
 }
 #board {
-    width: 1120px;
-    height: 500px;
+    width: 1350px;
+    height: 600px;
     background-color: lightblue;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -27,9 +39,27 @@ h2 {
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     margin: 0 auto;
-    border: 8px solid #5900b3;
-    border-radius: 2.2%;
+    /* border: 8px solid #5900b3;*/
+    /* border-radius: 2.2%; */
     }
+.gameboard {
+    border: 13px solid;
+    border-image-slice: 1;
+}
+.bordergradient {
+    border-image-source: linear-gradient(to left, #cc00ff, #e6005c)
+}
+@media screen and (max-width: 1300px) {
+    #board {
+        width: 800px;
+        height: 400px;
+    .gameboard 
+        border: 8px solid;
+        border-image-slice: 1;
+        border-width: 8px;
+    
+    }
+}
 
     /* .playerdeck {
         grid-column: 1;
@@ -43,9 +73,9 @@ h2 {
     
 
     #playerdeck, #playerpile, #blank, #finishpile1, #finishpile2, #finishpile3, #finishpile4, #playpile1, #playpile2, #playpile3, #playpile4, #playpile5, #playpile6, #playpile7 {
-        border: 5px solid green;
+        /* border: 5px solid green; */
         border-radius: 5%;
-        background-size: contain;
+        background-size: fill;
         background-repeat: no-repeat;
     }
 
