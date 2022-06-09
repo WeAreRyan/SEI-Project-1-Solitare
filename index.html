@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,16 +12,18 @@
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
-        </style>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script defer src='js/main.js'></script>
 </head>
+
 <body>
     <h1>Solitaire</h1>
     <h2>...or an approximation of it.</h2>
     <p class="devname">by Ryan Okamoto</p>
     <div id="board" class="gameboard bordergradient">
-        <div id='playerdeck' class ="card back-red"></div>
+        <div id='playerdeck' class="card back-red"></div>
         <div draggable=true id='playerpile' class="empypile"></div>
         <div id-='blank'></div>
         <div id='finishpile1' class="card back-blue"></div>
@@ -35,6 +38,7 @@
         <div draggable=true id='playpile6'></div>
         <div draggable=true id='playpile7'></div>
     </div>
-    <p id ="winline"></p>
+    <p id="winline"></p>
 </body>
+
 </html>
