@@ -6,6 +6,7 @@ Ryan Okamoto
 <br>
 
 <img src="">
+
 # Almost Solitaire
 <br>
 <a href="https://WeAreRyan.github.io/SEI-Project-1-Solitare/">Click here to play</a>
