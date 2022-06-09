@@ -115,24 +115,38 @@ finishPile4.cards = [];
 
 let playPile1 = document.getElementById('playpile1');
 playPile1.cards = [];
+let playPile1Top = document.getElementById('playpile1top');
+playPile1Top.cards = [];
 
 let playPile2 = document.getElementById('playpile2');
 playPile2.cards = [];
+let playPile2Top = document.getElementById('playpile2top');
+playPile2Top.cards = [];
 
 let playPile3 = document.getElementById('playpile3');
 playPile3.cards = [];
+let playPile3Top = document.getElementById('playpile3top');
+playPile3Top.cards = [];
 
 let playPile4 = document.getElementById('playpile4');
 playPile4.cards = [];
+let playPile4Top = document.getElementById('playpile4top');
+playPile4Top.cards = [];
 
 let playPile5 = document.getElementById('playpile5');
 playPile5.cards = [];
+let playPile5Top = document.getElementById('playpile5top');
+playPile5Top.cards = [];
 
 let playPile6 = document.getElementById('playpile6');
 playPile6.cards = [];
+let playPile6Top = document.getElementById('playpile6top');
+playPile6Top.cards = [];
 
 let playPile7 = document.getElementById('playpile7');
 playPile7.cards = [];
+let playPile7Top = document.getElementById('playpile7top');
+playPile7Top.cards = [];
 
 
 
@@ -192,9 +206,9 @@ function cardDrag(evt) {
     clickSource = event.target.cards;
   dragItem = event.target.cards[0];
   dragSource = event.target;
-  return dragItem;
-  return clickSource;
-  console.log(dragItem.cards);
+  // return dragItem;
+  // return clickSource;
+  // console.log(dragItem.cards);
   } else {
     console.log("no card")
   }
@@ -207,11 +221,14 @@ function cardDrag(evt) {
 
 function onDragOver(evt) {
   event.preventDefault();
-  dropTarget = event.target
+  dropTarget = event.target;
   return dropTarget;
 }
 
 function cardDropPlayPile(evt) {
+//  if (dragSource === placedCard) {
+//    console.log("placed card");
+//  }
  if (dropTarget.cards.length === 0 && dragItem.value === 13) {
   dropTarget.cards.unshift(dragItem);
   clickSource.splice(0, 1);
@@ -229,15 +246,15 @@ function cardDropPlayPile(evt) {
       dragSource.innerHTML = '';
     } else {dragSource.innerHTML = clickSource[0].type;}
 
-  placeCard();
+    // creatCardObj();
 
 } else {
   clickSource.unshift(dragItem);
   clickSource.splice(0, 1);
 }
 
-placedCardObj();
-cardPlop()
+// placedCardObj();
+// cardPlop()
 dropTarget = undefined;
 dragItem = undefined;
 clickSource = undefined;
@@ -245,19 +262,33 @@ clickSource = undefined;
 
 
 
-let placedCard  = undefined;
+// function creatCardObj() {
+//   if (dropTarget === playPile1 && playpile1card1 === undefined) {
 
-function placedCardObj() {
-  placedCard = document.getElementById(dragItem.type); 
-  placedCard.cards = []
-}
+//   } else {
+//   let newCard = document.createElement("div");
+// newCard.innerHTML = dragItem.type;
+// newCard.setAttribute('draggable', true)
+// newCard.setAttribute('id', 'newCard')
+// dropTarget.appendChild(newCard);
+// }}
 
-function cardPlop() {
-  placedCard.cards.push(dragItem);
-  clickSource.splice(0, 1); 
-  dropTarget.cards.splice(0, 1)
-  console.log('plop')
-  }
+
+// let placedCard  = undefined;
+
+// function placedCardObj() {
+//   placedCard = document.getElementById(newCard); 
+//   placedCard.cards = []
+// }
+
+// function cardPlop() {
+//   placedCard.cards.push(dragItem);
+
+
+//   clickSource.splice(0, 1); 
+//   dropTarget.cards.splice(0, 1)
+//   console.log('plop')
+//   }
 
 
 
@@ -298,7 +329,7 @@ function cardDropFinishPile(evt) {
 
 function gameStart() {
   shuffle();
-  playPile1.cards.push(fullDeck[0]);
+  playPile1Top.cards.push(fullDeck[0]);
   fullDeck.splice(0, 1);
   playPile2.cards.push(fullDeck[0], fullDeck[1]);
   fullDeck.splice(0, 2);
