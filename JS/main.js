@@ -5,6 +5,7 @@ console.log("js is working");
 
 const board = document.getElementById('board');
 const Deck = [];
+const winLine = document.getElementById('winline');
 
 //Gameboard objects
 
@@ -206,12 +207,7 @@ function cardDrag(evt) {
     clickSource = event.target.cards;
   dragItem = event.target.cards[0];
   dragSource = event.target;
-  // return dragItem;
-  // return clickSource;
-  // console.log(dragItem.cards);
-  } else {
-    console.log("no card")
-  }
+  } else {}
 
 }
 
@@ -242,11 +238,12 @@ function cardDropPlayPile(evt) {
     clickSource.splice(0, 1);
   } else if (dragItem.red !== dropTarget.cards[0].red && dragItem.value === dropTarget.cards[0].value - 1) {
     dropTarget.cards.unshift(dragItem);
+    clickSource.splice(0, 1);
     if (dragSource.cards.length === 0) {
       dragSource.innerHTML = '';
     } else {dragSource.innerHTML = clickSource[0].type;}
 
-    // creatCardObj();
+    creatCardObj();
 
 } else {
   clickSource.unshift(dragItem);
@@ -262,19 +259,16 @@ clickSource = undefined;
 
 
 
-// function creatCardObj() {
-//   if (dropTarget === playPile1 && playpile1card1 === undefined) {
-
-//   } else {
-//   let newCard = document.createElement("div");
-// newCard.innerHTML = dragItem.type;
-// newCard.setAttribute('draggable', true)
-// newCard.setAttribute('id', 'newCard')
-// dropTarget.appendChild(newCard);
-// }}
+function creatCardObj() {
+let newCard = document.createElement("div");
+newCard.innerHTML = dragItem.type;
+newCard.setAttribute('draggable', true)
+newCard.setAttribute('id', 'newCard')
+dropTarget.appendChild(newCard);
+}
 
 
-// let placedCard  = undefined;
+let placedCard  = undefined;
 
 // function placedCardObj() {
 //   placedCard = document.getElementById(newCard); 
@@ -283,7 +277,6 @@ clickSource = undefined;
 
 // function cardPlop() {
 //   placedCard.cards.push(dragItem);
-
 
 //   clickSource.splice(0, 1); 
 //   dropTarget.cards.splice(0, 1)
@@ -323,13 +316,14 @@ function cardDropFinishPile(evt) {
   dropTarget = undefined;
   dragItem = undefined;
   clickSource = undefined;
+  winCheck()
 }
 
 /*----- functions -----*/
 
 function gameStart() {
   shuffle();
-  playPile1Top.cards.push(fullDeck[0]);
+  playPile1.cards.push(fullDeck[0]);
   fullDeck.splice(0, 1);
   playPile2.cards.push(fullDeck[0], fullDeck[1]);
   fullDeck.splice(0, 2);
@@ -444,8 +438,12 @@ function shuffle() {
 
 
 
-gameStart();
 
+function winCheck() {
+  if(finishPile1.cards.length === 13 && finishPile2.cards.length === 13 && finishPile3.cards.length === 13 && finishPile4.cards.length === 13) {
+    winLine.innerText = "Ding! Ding! Ding!"
+  } else {console.log('Nope!')}
+}
 
 
 
@@ -461,7 +459,7 @@ dropTarget.appendChild(newCard);
 }
 
 
-
+gameStart();
 
 // let placedCard  = undefined;
 

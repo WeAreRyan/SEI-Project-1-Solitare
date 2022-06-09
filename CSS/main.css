@@ -7,7 +7,14 @@
 body {
      background-color: black;  
 }
-
+h1 {
+    color: white;
+    text-align: center;
+}
+h2 {
+    color: white;
+    text-align: center;
+}
 #board {
     width: 80%;
     height: 800px;
@@ -33,4 +40,8 @@ body {
 
     #playerdeck, #playerpile, #blank, #finishpile1, #finishpile2, #finishpile3, #finishpile4, #playpile1, #playpile2, #playpile3, #playpile4, #playpile5, #playpile6, #playpile7 {
         border: 5px solid green;
+    }
+
+    div {
+        font-size: 40px;
     }
