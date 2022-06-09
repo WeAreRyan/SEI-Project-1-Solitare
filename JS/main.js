@@ -116,38 +116,38 @@ finishPile4.cards = [];
 
 let playPile1 = document.getElementById('playpile1');
 playPile1.cards = [];
-let playPile1Top = document.getElementById('playpile1top');
-playPile1Top.cards = [];
+// let playPile1Top = document.getElementById('playpile1top');
+// playPile1Top.cards = [];
 
 let playPile2 = document.getElementById('playpile2');
 playPile2.cards = [];
-let playPile2Top = document.getElementById('playpile2top');
-playPile2Top.cards = [];
+// let playPile2Top = document.getElementById('playpile2top');
+// playPile2Top.cards = [];
 
 let playPile3 = document.getElementById('playpile3');
 playPile3.cards = [];
-let playPile3Top = document.getElementById('playpile3top');
-playPile3Top.cards = [];
+// let playPile3Top = document.getElementById('playpile3top');
+// playPile3Top.cards = [];
 
 let playPile4 = document.getElementById('playpile4');
 playPile4.cards = [];
-let playPile4Top = document.getElementById('playpile4top');
-playPile4Top.cards = [];
+// let playPile4Top = document.getElementById('playpile4top');
+// playPile4Top.cards = [];
 
 let playPile5 = document.getElementById('playpile5');
 playPile5.cards = [];
-let playPile5Top = document.getElementById('playpile5top');
-playPile5Top.cards = [];
+// let playPile5Top = document.getElementById('playpile5top');
+// playPile5Top.cards = [];
 
 let playPile6 = document.getElementById('playpile6');
 playPile6.cards = [];
-let playPile6Top = document.getElementById('playpile6top');
-playPile6Top.cards = [];
+// let playPile6Top = document.getElementById('playpile6top');
+// playPile6Top.cards = [];
 
 let playPile7 = document.getElementById('playpile7');
 playPile7.cards = [];
-let playPile7Top = document.getElementById('playpile7top');
-playPile7Top.cards = [];
+// let playPile7Top = document.getElementById('playpile7top');
+// playPile7Top.cards = [];
 
 
 
@@ -268,7 +268,8 @@ dropTarget.appendChild(newCard);
 }
 
 
-let placedCard  = undefined;
+
+// let placedCard  = undefined;
 
 // function placedCardObj() {
 //   placedCard = document.getElementById(newCard); 
@@ -318,6 +319,15 @@ function cardDropFinishPile(evt) {
   clickSource = undefined;
   winCheck()
 }
+
+// Creats new child div for cards placed on playpiles
+function creatCardObj() {
+  let newCard = document.createElement("div");
+  newCard.innerHTML = dragItem.type;
+  newCard.setAttribute('draggable', true)
+  newCard.setAttribute('id', 'newCard')
+  dropTarget.appendChild(newCard);
+  }
 
 /*----- functions -----*/
 
