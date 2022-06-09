@@ -11,14 +11,23 @@ const winLine = document.getElementById('winline');
 
 
 
-//Card objects
+//Card objects class
 class Card {
   constructor(red, suit, value, type) {
     this.red = red;
     this.suit = suit;
     this.value = value;
     this.type = type;
+
+    this.primed = false;
+
   }
+
+  primed() {
+    this.prime = true;
+  }
+
+
 }
 
 // Objects for heart cards
@@ -334,18 +343,25 @@ function creatCardObj() {
 function gameStart() {
   shuffle();
   playPile1.cards.push(fullDeck[0]);
+  playPile1.cards[0].primed = true;
   fullDeck.splice(0, 1);
   playPile2.cards.push(fullDeck[0], fullDeck[1]);
+  playPile2.cards[0].primed = true;
   fullDeck.splice(0, 2);
   playPile3.cards.push(fullDeck[0], fullDeck[1], fullDeck[2]);
+  playPile3.cards[0].primed = true;
   fullDeck.splice(0, 3);
   playPile4.cards.push(fullDeck[0], fullDeck[1], fullDeck[2], fullDeck[3]);
+  playPile4.cards[0].primed = true;
   fullDeck.splice(0, 4);
   playPile5.cards.push(fullDeck[0], fullDeck[1], fullDeck[2], fullDeck[3], fullDeck[4]);
+  playPile5.cards[0].primed = true;
   fullDeck.splice(0, 5);
   playPile6.cards.push(fullDeck[0], fullDeck[1], fullDeck[2], fullDeck[3], fullDeck[4], fullDeck[5]);
+  playPile6.cards[0].primed = true;
   fullDeck.splice(0, 6);
   playPile7.cards.push(fullDeck[0], fullDeck[1], fullDeck[2], fullDeck[3], fullDeck[4], fullDeck[5], fullDeck[6]);
+  playPile7.cards[0].primed = true;
   fullDeck.splice(0, 7);
   while (fullDeck.length > 0) {
     playerDeck.cards.push(fullDeck[0]);
@@ -448,6 +464,13 @@ function shuffle() {
 
 
 
+// Win functions
+function forceWin() {
+  finishPile1.cards = [HA, H2, H3, H4, H5, H6, H7, H8, H9, H10, HJ, HQ, HK];
+  finishPile2.cards = [DA, D2, D3, D4, D5, D6, D7, D8, D9, D10, DJ, DQ, DK];
+  finishPile3.cards = [CA, C2, C3, C4, C5, C6, C7, C8, C9, C10, CJ, CQ, CK];
+  finishPile4.cards = [SA, S2, S3, S4, S5, S6, S7, S8, S9, S10, SJ, SQ, SK];
+}
 
 function winCheck() {
   if(finishPile1.cards.length === 13 && finishPile2.cards.length === 13 && finishPile3.cards.length === 13 && finishPile4.cards.length === 13) {
@@ -530,7 +553,4 @@ gameStart();
 function findTotalCards() {
   let totalCards = playPile1.cards.length + playPile2.cards.length + playPile3.cards.length + playPile4.cards.length + playPile5.cards.length + playPile6.cards.length + playPile7.cards.length + finishPile1.cards.length + finishPile2.cards.length + finishPile3.cards.length + finishPile4.cards.length + playerDeck.cards.length + playerPile.cards.length; 
   console.log(totalCards); 
-  
-}
-
-  // Drag and drop card functions
+  }

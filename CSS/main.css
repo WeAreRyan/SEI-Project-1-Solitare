@@ -10,6 +10,8 @@ body {
 h1 {
     color: white;
     text-align: center;
+    font-size: 50px;
+    text-shadow: 3px 3px #e60000;
 }
 h2 {
     color: white;
@@ -46,5 +48,11 @@ h2 {
     }
 
     div {
+        font-size: 30px;
+    }
+
+    #winline {
+        color: #00b300;
         font-size: 40px;
+        text-align: center;
     }
