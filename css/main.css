@@ -45,6 +45,8 @@ h2 {
     #playerdeck, #playerpile, #blank, #finishpile1, #finishpile2, #finishpile3, #finishpile4, #playpile1, #playpile2, #playpile3, #playpile4, #playpile5, #playpile6, #playpile7 {
         border: 5px solid green;
         border-radius: 5%;
+        background-size: 1fr;
+        background-repeat: no-repeat;
     }
 
     div {
