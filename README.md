@@ -34,7 +34,7 @@ Currently the game does not allow the player to grab and move stacks of cards be
 <br>
 Create card class, each card has 4 key value pairs to identify it and interact with game functionality.</br>
 card = {<br/>
-    **red** : indicates card color;<br/>
+    **red**: indicates card color;<br/>
     **suit**: indicates card suit<br/>
     **value**: cards are given a value from 1 to 13 in accordance with the card type(i.e. 5 = 5, ace = 1)<br/>**queen** = 11}</br>. This value is used by the game functions to determine if a pile will allow that card to be played.<br/> 
     **type**: individual card represented by a sting ('card dJ' = Jack of diamonds). Used as a reference point for card visualization. <br/>
@@ -45,7 +45,9 @@ Function to randomize card order.<br/>
 Function to deal out cards on game start.<br/>
 Function for flipping card from deck & event click listener.<br/>
 Each game pile will be represented by a JS array containing all cards in said pile and the order at which they have been added.<br/>
-Each game pile will be visually represented by the card **type** via a class inserted by a function that has been called.<br/>
+Each game pile will be visually represented by the card 
+**type**
+ via a class inserted by a function that has been called.<br/>
 Add event listeners for each interactable card pile for drag and drop functionality. dragstart, dragover, drop.<br/>
 Functions to determine if a card is playable at a drop location: this will determine if the dragged cards **value**, __red__ and **suit** are all associated with a playable move in solitaire.<br/>
 Functions to updates card displayed on each pile when a legitimate play is input.<br/>
@@ -57,3 +59,7 @@ The game is be visually represented by a simple 2 by 7 CSS grid. Each tile on th
 
 Above the game there are simple h1, h2 and p elements for the game title, subtitle and developer name. Below the game there is an additional p element which remains empty until the player wins the game, at which point it displays a win message. 
 
+***red***
+___red___
+ __red__
+  **red**
