@@ -47,7 +47,7 @@ Function for flipping card from deck & event click listener.<br/>
 Each game pile will be represented by a JS array containing all cards in said pile and the order at which they have been added.<br/>
 Each game pile will be visually represented by the card **type** via a class inserted by a function that has been called.<br/>
 Add event listeners for each interactable card pile for drag and drop functionality. dragstart, dragover, drop.<br/>
-Functions to determine if a card is playable at a drop location: this will determine if the dragged cards **value**, **red** and **suit** are all associated with a playable move in solitaire.<br/>
+Functions to determine if a card is playable at a drop location: this will determine if the dragged cards **value**, __red__ and **suit** are all associated with a playable move in solitaire.<br/>
 Functions to updates card displayed on each pile when a legitimate play is input.<br/>
 Function that is called appropriately that determines if the game has been completed. This function will check to see if each of the 4 finish piles associated arrays contain 13 objects.
 
