@@ -314,7 +314,7 @@ function winCheck() {
     winLine.innerText = "Ding! Ding! Ding!"
   } else { console.log('Nope!') }
 }
-// !!! Function to simulate completed game, left in for presentation. 
+// !!! Function to simulate win condition, left in for presentation. 
 function forceWin() {
   finishPile1.cards = [HA, H2, H3, H4, H5, H6, H7, H8, H9, H10, HJ, HQ, HK];
   finishPile2.cards = [DA, D2, D3, D4, D5, D6, D7, D8, D9, D10, DJ, DQ, DK];
