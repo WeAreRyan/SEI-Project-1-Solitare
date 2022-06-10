@@ -9,7 +9,7 @@ Ryan Okamoto
 
 # Almost Solitaire
 <br>
-<a href="https://WeAreRyan.github.io/SEI-Project-1-Solitare/">Click here to play</a>
+<a href="https://WeAreRyan.github.io/SEI-Project-1-Solitare/" target="_blank">Click here to play</a>
 
 # Functionality
 <br>
