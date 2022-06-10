@@ -24,17 +24,22 @@ Currently the game does not allow the player to grab and move stacks of cards be
 # Pseudocode
 <br>
 Create card class, each card has 4 key value pairs to identify it and interact with game functionality. 
-card = {
-    **red**: indicates card color;
-    **suit**: indicates card suit
-    **value**: cards are given a value from 1 to 13 in accordance with the card type(i.e. 5 = 5, ace = 1, **queen** = 11). This value is used by the game functions to determine its playablity on a pile. 
-    **type**: individual card represented by a sting ('card dJ' = Jack of diamonds). Used as a reference point for card visualization. 
-}
+card = {<br/>
+    **red**: indicates card color;<br/>
+    **suit**: indicates card suit<br/>
+    **value**: cards are given a value from 1 to 13 in accordance with the card type(i.e. 5 = 5, ace = 1)<br/>**queen** = 11). This value is used by the game functions to determine its playablity on a pile.<br/> 
+    **type**: individual card represented by a sting ('card dJ' = Jack of diamonds). Used as a reference point for card visualization. <br/>
+}<br/>
 Generate card objects.<br/>
 Pull dom objects for interactable tiles into JS.<br/>
 Function to randomize card order.<br/>
 Function to deal out cards on game start.<br/>
 Function for flipping card from deck & event click listener.<br/>
+Each game pile will be represented by a JS array containing all cards in said pile and the order at which they have been added.<br/>
+Each game pile will be visually represented by the card **type** via a class inserted by a function that has been called.<br/>
 Add event listeners for each interactable card pile for drag and drop functionality. dragstart, dragover, drop.<br/>
-Functions to determine if a card is playable at a location:
+Functions to determine if a card is playable at a drop location: this will determine if the dragged cards **value**, **red** and **suit** are all associated with a playable move in solitaire.<br/>
+Functions to updates card displayed on each pile when a legitimate play is input.<br/>
+Function that is called appropriately that determines if the game has been completed. This function will check to see if each of the 4 finish piles associated arrays contain 13 objects.
+
 
