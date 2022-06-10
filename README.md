@@ -30,11 +30,11 @@ card = {
     **value**: cards are given a value from 1 to 13 in accordance with the card type(i.e. 5 = 5, ace = 1, **queen** = 11). This value is used by the game functions to determine its playablity on a pile. 
     **type**: individual card represented by a sting ('card dJ' = Jack of diamonds). Used as a reference point for card visualization. 
 }
-Generate card objects
-Pull dom objects for interactable tiles into JS
-Function to randomize card order
-Function to deal out cards on game start
-Function for flipping card from deck & event click listener.
-Add event listeners for each interactable card pile for drag and drop functionality. dragstart, dragover, drop. 
+Generate card objects.  
+Pull dom objects for interactable tiles into JS.  
+Function to randomize card order.  
+Function to deal out cards on game start.  
+Function for flipping card from deck & event click listener.  
+Add event listeners for each interactable card pile for drag and drop functionality. dragstart, dragover, drop.  
 Functions to determine if a card is playable at a location:
 
