@@ -25,7 +25,7 @@ Currently the game does not allow the player to grab and move stacks of cards be
 <br>
 Create card class, each card has 4 key value pairs to identify it and interact with game functionality. 
 card = {<br/>
-    **red**: indicates card color;<br/>
+    __red__: indicates card color;<br/>
     **suit**: indicates card suit<br/>
     **value**: cards are given a value from 1 to 13 in accordance with the card type(i.e. 5 = 5, ace = 1)<br/>**queen** = 11). This value is used by the game functions to determine its playablity on a pile.<br/> 
     **type**: individual card represented by a sting ('card dJ' = Jack of diamonds). Used as a reference point for card visualization. <br/>
