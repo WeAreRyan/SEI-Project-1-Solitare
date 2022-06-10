@@ -25,18 +25,18 @@ I am mostly happy with the outcome of this project. The largest challenge that i
 # Next Steps
 <br>
 Currently the game does not allow the player to grab and move stacks of cards between the bottom 7 play piles. This is why the game rules do not follow a normal game of solitaire as the absence of this ability would essentially make the game impossible to complete. Given my current skill level and knowledge of programming I believe adding functionality that allows the player to move multiple cards at once would require a complete restructure of how the application tracks the location of individual cards. I also intend to add a visual representation of each play pile along with the ability to grab stacks of cards in the future. </br>
-> - Add reset game button
-> - Provide additional @media styling for different screen sizes
-> - Add animations for moving cards
+⋅⋅* Add reset game button
+⋅⋅* Provide additional @media styling for different screen sizes
+⋅⋅* Add animations for moving cards
 
 ## Pseudocode
 <br>
 Create card class, each card has 4 key value pairs to identify it and interact with game functionality.</br>
 card = {<br/>
-    ***red***: indicates card color;<br/>
-    ***suit***: indicates card suit<br/>
-    ***value***: cards are given a value from 1 to 13 in accordance with the card type(i.e. 5 = 5, ace = 1)<br/>***queen*** = 11}</br>. This value is used by the game functions to determine if a pile will allow that card to be played.<br/> 
-    ***type***: individual card represented by a sting ('card dJ' = Jack of diamonds). Used as a reference point for card visualization. <br/>
+    **red**: indicates card color;<br/>
+    **suit**: indicates card suit<br/>
+    **value**: cards are given a value from 1 to 13 in accordance with the card type(i.e. 5 = 5, ace = 1)<br/>**queen** = 11}</br>. This value is used by the game functions to determine if a pile will allow that card to be played.<br/> 
+    **type**: individual card represented by a sting ('card dJ' = Jack of diamonds). Used as a reference point for card visualization. <br/>
 }<br/>
 Generate card objects.<br/>
 Pull dom objects for intractable tiles into JS.<br/>
@@ -44,9 +44,9 @@ Function to randomize card order.<br/>
 Function to deal out cards on game start.<br/>
 Function for flipping card from deck & event click listener.<br/>
 Each game pile will be represented by a JS array containing all cards in said pile and the order at which they have been added.<br/>
-Each game pile will be visually represented by the card ***type*** via a class inserted by a function that has been called.<br/>
+Each game pile will be visually represented by the card **type** via a class inserted by a function that has been called.<br/>
 Add event listeners for each interactable card pile for drag and drop functionality. dragstart, dragover, drop.<br/>
-Functions to determine if a card is playable at a drop location: this will determine if the dragged cards ***value***, ***red*** and ***suit*** are all associated with a playable move in solitaire.<br/>
+Functions to determine if a card is playable at a drop location: this will determine if the dragged cards **value**, **red** and **suit** are all associated with a playable move in solitaire.<br/>
 Functions to updates card displayed on each pile when a legitimate play is input.<br/>
 Function that is called appropriately that determines if the game has been completed. This function will check to see if each of the 4 finish piles associated arrays contain 13 objects.
 
