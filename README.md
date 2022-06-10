@@ -25,9 +25,9 @@ I am mostly happy with the outcome of this project. The largest challenge that i
 # Next Steps
 <br>
 Currently the game does not allow the player to grab and move stacks of cards between the bottom 7 play piles. This is why the game rules do not follow a normal game of solitaire as the absence of this ability would essentially make the game impossible to complete. Given my current skill level and knowledge of programming I believe adding functionality that allows the player to move multiple cards at once would require a complete restructure of how the application tracks the location of individual cards. I also intend to add a visual representation of each play pile along with the ability to grab stacks of cards in the future. </br>
-* Add reset game button
-* Provide additional @media styling for different screen sizes
-* Add animations for moving cards
+- Add reset game button
+- Provide additional @media styling for different screen sizes
+- Add animations for moving cards
 
 ## Pseudocode
 <br>
