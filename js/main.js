@@ -312,7 +312,7 @@ function cardLocations() {
 function winCheck() {
   if (finishPile1.cards.length === 13 && finishPile2.cards.length === 13 && finishPile3.cards.length === 13 && finishPile4.cards.length === 13) {
     winLine.innerText = "Ding! Ding! Ding!"
-  } else { console.log('Nope!') }
+  } else {};
 }
 // !!! Function to simulate win condition, left in for presentation. 
 function forceWin() {
